@@ -195,7 +195,7 @@ section {
 
     .item {
         border-radius: .75rem;
-        background-color: var(--color-beige);
+        /*background-color: var(--color-beige);*/
         text-align: center;
         padding: 2rem 1rem;
         display: flex;
@@ -365,7 +365,7 @@ section {
     gap: .5rem;
     max-width: 700px;
     margin-top: 2rem;
-    background-color: var(--color-beige);
+    /*background-color: var(--color-beige);*/
     padding: 1rem;
     border-radius: .75rem;
 
