@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url(variables.css);
+@import url(fonts.css);
+@import url(colors.css);
 
 * {
     margin: 0;
@@ -9,13 +8,13 @@
 }
 
 html {
-    background-color: var(--color-white-2);
+    background-color: var(--page-background-color);
     font-family: var(--font-family-main);
     font-size: 16px;
 }
 
 body {
-    color: var(--color-black);
+    color: var(--text-main-color);
 }
 
 p {
@@ -31,23 +30,24 @@ ul {
 }
 
 a {
-    color: var(--color-gold-dark);
+    color: var(--link-main-color);
     font-weight: 500;
     text-decoration: underline;
+    transition: color 0.3s;
 
     &:hover {
-        color: var(--color-gold);
+        color: var(--link-active-color);
     }
 }
 
 .header {
-    background-color: var(--color-black);
+    background-color: var(--header-background-color);
     padding: 1rem 2rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid var(--color-black-active);
+    border-bottom: 1px solid var(--header-border-color);
     height: 90px;
 
     nav {
@@ -64,9 +64,7 @@ a {
                 height: 100%;
                 align-items: center;
                 text-decoration: none;
-                color: var(--color-gold-dark);
                 font-weight: 500;
-                transition: color 0.3s;
 
                 img {
                     width: auto;
@@ -75,12 +73,8 @@ a {
                     max-height: 100%;
                 }
 
-                &:hover {
-                    color: var(--color-gold);
-
-                    img {
-                        filter: brightness(120%);
-                    }
+                &:hover img {
+                    filter: brightness(120%);
                 }
             }
         }
@@ -90,13 +84,13 @@ a {
 .hero-banner {
     text-align: center;
     padding: 4rem 2rem;
-    background-color: var(--color-black);
+    background-color: var(--banner-background-color);
     max-width: unset;
     margin: 0;
 
     h1 {
         font-size: 3.5rem;
-        color: var(--color-gold-dark);
+        color: var(--banner-heading-color);
         margin-bottom: 1rem;
     }
 
@@ -104,7 +98,7 @@ a {
         font-size: 1.2rem;
         max-width: 700px;
         margin: 0 auto 2rem auto;
-        color: var(--color-gold);
+        color: var(--banner-text-color);
     }
 }
 
@@ -118,7 +112,7 @@ section {
     h2,
     h3,
     h4 {
-        color: var(--color-gold);
+        color: var(--section-heading-color);
     }
 
     h2 {
@@ -136,7 +130,7 @@ section {
             left: 0;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
-            background-color: var(--color-gold);
+            background-color: var(--section-heading-color);
         }
     }
 
@@ -157,7 +151,7 @@ section {
 
     p {
         margin-bottom: 1rem;
-        color: var(--color-brown);
+        color: var(--section-description-color);
     }
 }
 
@@ -180,13 +174,13 @@ section {
         flex: 0 0 calc(100% / 4 - 2rem * 3 / 4);
         max-width: 190px;
         text-align: center;
-        color: var(--color-black-active);
+        color: var(--grid-text-color);
         font-weight: 500;
         transition: color 0.3s;
         cursor: default;
 
         &:hover {
-            color: var(--color-white-4);
+            color: var(--grid-text-hover-color);
         }
 
         .icon {
@@ -207,7 +201,6 @@ section {
 
     .item {
         border-radius: .75rem;
-        /*background-color: var(--color-beige);*/
         text-align: center;
         padding: 2rem 1rem;
         display: flex;
@@ -233,14 +226,14 @@ section {
         }
 
         dt {
-            color: var(--color-gray);
+            color: var(--data-list-title-color);
             font-size: 1.25rem;
             font-weight: 500;
             text-transform: uppercase;
         }
 
         dd {
-            color: var(--color-black-active);
+            color: var(--data-list-text-color);
             font-size: 1.7rem;
             font-weight: 600;
             flex-grow: 1;
@@ -256,15 +249,15 @@ section {
     margin: 2rem auto 1rem;
     position: relative;
     text-align: center;
-    background-color: var(--color-beige-2);
-    outline: 0.5rem solid var(--color-beige-2);
-    box-shadow: 0.6rem -0.6rem 0 0.5rem var(--color-beige);
+    background-color: var(--quote-background-color);
+    outline: 0.5rem solid var(--quote-outline-color);
+    box-shadow: 0.6rem -0.6rem 0 0.5rem var(--quote-shadow-color);
 
     &::before,
     &::after {
         position: absolute;
         font-size: 4rem;
-        color: var(--color-gold-dark);
+        color: var(--quote-quotes-color);
         width: 1rem;
         line-height: 1rem;
     }
@@ -283,13 +276,13 @@ section {
     }
 }
 
-.coins-list,
+/* .coins-list, */
 .marked-list {
     li {
         margin-bottom: .75rem;
         padding-left: 1.75rem;
         position: relative;
-        color: var(--color-black-active);
+        color: var(--list-text-color);
 
         &::before {
             content: '';
@@ -305,8 +298,8 @@ section {
 .marked-list li::before {
     content: '\2713';
     font-size: 1.25rem;
-    color: var(--color-gold-dark);
-    border: 2px solid var(--color-gold);
+    color: var(--list-icon-color);
+    border: 2px solid var(--list-icon-border-color);
     border-radius: .25rem;
     width: 1rem;
     height: 1rem;
@@ -315,13 +308,13 @@ section {
     justify-content: center;
 }
 
-.coins-list li::before {
+/* .coins-list li::before {
     background-image: url(coin.png);
     background-repeat: no-repeat;
     background-size: contain;
     width: 1.25rem;
     height: 1.25rem;
-}
+} */
 
 .marked {
     padding: 0.25rem 0 0.25rem 0.75rem;
@@ -330,7 +323,7 @@ section {
 
     &::before {
         content: '';
-        background-color: var(--color-gold);
+        background-color: var(--marked-text-color);
         position: absolute;
         left: 0;
         top: 0;
@@ -351,7 +344,7 @@ section {
         min-width: 250px;
         padding: 1rem;
         text-align: center;
-        background-color: var(--color-white-3);
+        background-color: var(--team-item-background-color);
         border-radius: 0.75rem;
         transition: transform 0.3s, box-shadow 0.3s;
 
@@ -377,7 +370,6 @@ section {
     gap: .5rem;
     max-width: 700px;
     margin-top: 2rem;
-    /*background-color: var(--color-beige);*/
     padding: 1rem;
     border-radius: .75rem;
 
@@ -411,7 +403,7 @@ section {
             width: min-content;
             text-align: center;
             position: relative;
-            color: var(--color-gray);
+            color: var(--form-separator-text-color);
             line-height: 1em;
 
             &::after,
@@ -420,7 +412,7 @@ section {
                 display: block;
                 height: 1px;
                 width: 50vw;
-                background-color: var(--color-white-4);
+                background-color: var(--form-separator-background-color);
                 position: absolute;
                 top: 50%;
             }
@@ -434,15 +426,15 @@ section {
             }
         }
 
-        input,
+        input:not([type="file"]),
         select,
         textarea,
         button {
             padding: 0.8rem 1rem;
-            border: 1px solid var(--color-white-4);
+            border: 1px solid var(--form-input-border-color);
             border-radius: 6px;
-            background-color: var(--color-white-2);
-            color: var(--color-black);
+            background-color: var(--form-input-background-color);
+            color: var(--form-input-text-color);
             font-size: 1rem;
             transition: border 0.3s, box-shadow 0.3s;
             width: 100%;
@@ -451,15 +443,15 @@ section {
             font-family: var(--font-family-secondary);
 
             &::placeholder {
-                color: var(--color-black-active);
+                color: var(--form-input-placeholder-color);
                 filter: opacity(90%);
             }
 
             &:focus,
             &:hover {
-                border-color: var(--color-gold-active);
+                border-color: var(--form-input-hover-border-color);
                 outline: none;
-                box-shadow: 0 0 5px var(--color-gold-active);
+                box-shadow: 0 0 5px var(--form-input-hover-shadow-color);
             }
         }
 
@@ -467,28 +459,21 @@ section {
             font-size: .75rem;
 
             &::file-selector-button {
-                cursor: pointer;
-                background-color: var(--color-black);
-                color: var(--color-gold-dark);
                 padding: 0.4rem .5rem;
                 border-radius: 0.5rem;
                 font-size: .75rem;
-
-                &:hover {
-                    background-color: var(--color-black-active);
-                    color: var(--color-gold);
-                }
             }
         }
 
+        input::file-selector-button,
         button {
             cursor: pointer;
-            background-color: var(--color-black);
-            color: var(--color-gold-dark);
+            background-color: var(--form-button-background-color);
+            color: var(--form-button-text-color);
 
             &:hover {
-                background-color: var(--color-black-active);
-                color: var(--color-gold);
+                background-color: var(--form-button-hover-background-color);
+                color: var(--form-button-hover-text-color);
             }
         }
 
@@ -503,7 +488,7 @@ section {
     .note {
         flex-basis: 50%;
         font-size: .8rem;
-        color: var(--color-gold-dark);
+        color: var(--form-note-color);
         font-family: var(--font-family-secondary);
         margin: 0;
     }
@@ -512,7 +497,6 @@ section {
 .emails-list {
     display: flex;
     gap: .5rem;
-    margin-bottom: 1rem;
 
     dt {
         font-weight: 600;
@@ -523,7 +507,7 @@ section {
     }
 }
 
-.locations-list {
+/* .locations-list {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem 2rem;
@@ -550,14 +534,14 @@ section {
             }
         }
     }
-}
+} */
 
 .footer {
-    background-color: var(--color-black);
+    background-color: var(--footer-background-color);
     padding: 1rem 2rem;
-    border-top: 1px solid var(--color-black-active);
+    border-top: 1px solid var(--footer-border-color);
     height: 90px;
-    color: var(--color-gold-dark);
+    color: var(--footer-text-color);
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -1,0 +1,75 @@
+:root {
+    --color-gold: #C8A951;
+    --color-gold-dark: #ac7322;
+    --color-gold-active: #A68A2C;
+    --color-brown: #6a4605;
+    --color-beige: #e2bd0b54;
+    --color-beige-2: #e2bd0b2b;
+    --color-black: #1E1E1E;
+    --color-black-active: rgba(0, 0, 0, 0.75);
+    --color-white-1: #FFFFFF;
+    --color-white-2: #F9F9F9;
+    --color-white-3: #F2F2F2;
+    --color-white-4: #B5B5B5;
+    --color-white-5: #E5E5E5;
+    --color-gray: #888484;
+}
+
+body {
+    --page-background-color: var(--color-white-2);
+
+    --header-background-color: var(--color-black);
+    --header-border-color: var(--color-black-active);
+
+    --banner-background-color: var(--color-black);
+    --banner-heading-color: var(--color-gold-dark);
+    --banner-text-color: var(--color-gold);
+
+    --text-main-color: var(--color-black);
+
+    --link-main-color: var(--color-gold-dark);
+    --link-active-color: var(--color-gold);
+
+    --section-heading-color: var(--color-gold);
+    --section-description-color: var(--color-brown);
+
+    --grid-text-color: var(--color-black-active);
+    --grid-text-hover-color: var(--color-white-4);
+
+    --data-list-title-color: var(--color-gray);
+    --data-list-text-color: var(--color-black-active);
+
+    --quote-background-color: var(--color-beige-2);
+    --quote-outline-color: var(--color-beige-2);
+    --quote-shadow-color: var(--color-beige);
+    --quote-quotes-color: var(--color-gold-dark);
+
+    --list-text-color: var(--color-black-active);
+    --list-icon-color: var(--color-gold-dark);
+    --list-icon-border-color: var(--color-gold);
+
+    --marked-text-color: var(--color-gold);
+
+    --team-item-background-color: var(--color-white-3);
+
+    --form-separator-text-color: var(--color-gray);
+    --form-separator-background-color: var(--color-white-4);
+
+    --form-input-text-color: var(--color-black);
+    --form-input-background-color: var(--color-white-2);
+    --form-input-border-color: var(--color-white-4);
+    --form-input-placeholder-color: var(--color-black-active);
+    --form-input-hover-border-color: var(--color-gold-active);
+    --form-input-hover-shadow-color: var(--color-gold-active);
+
+    --form-button-text-color: var(--color-gold-dark);
+    --form-button-background-color: var(--color-black);
+    --form-button-hover-text-color: var(--color-gold);
+    --form-button-hover-background-color: var(--color-black-active);
+
+    --form-note-color: var(--color-gold-dark);
+
+    --footer-text-color: var(--color-gold-dark);
+    --footer-background-color: var(--color-black);
+    --footer-border-color: var(--color-black-active);
+}
