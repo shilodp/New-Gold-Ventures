@@ -178,9 +178,14 @@ section {
         font-weight: 500;
         transition: color 0.3s;
         cursor: default;
+        transition: color .3s;
 
         &:hover {
             color: var(--grid-text-hover-color);
+
+            .icon {
+                transform: scale(1.1);
+            }
         }
 
         .icon {
@@ -188,6 +193,7 @@ section {
             width: 60px;
             height: auto;
             margin-bottom: 1rem;
+            transition: transform .3s;
         }
     }
 }

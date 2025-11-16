@@ -34,7 +34,7 @@ body {
     --section-description-color: var(--color-brown);
 
     --grid-text-color: var(--color-black-active);
-    --grid-text-hover-color: var(--color-white-4);
+    --grid-text-hover-color: var(--color-black);
 
     --data-list-title-color: var(--color-gray);
     --data-list-text-color: var(--color-black-active);
